@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/output.css">
+    <title>Document</title>
+</head>
+<body>
+  <!-- 　レスポンシブデザイン -->
+    <h1 class="text-4xl text-green-700 text-center font-semibold">Hello Tailwind</h1>
+      <div class="md:flex">
+        <div class="md:flex-shrink-0">
+          <img class="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" width="448" height="299" alt="Woman paying for a purchase">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+          <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Marketing</div>
+          <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
+          <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+        </div>
+      
+      </div>
+      <!-- Mobile First -->
+      <div class="bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500">aaaa</div>
+
+      <!-- 疑似クラスバリアント -->
+
+      <form>
+        <input class="bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 ...">
+        <button class="bg-teal-500 hover:bg-teal-600 focus:outline-none focus:shadow-outline ...">
+          Sign Up
+        </button>
+      </form>
+
+      <button class="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">
+        Hover me
+      </button>
+
+      
+        <form class="flex w-full max-w-sm mx-auto">
+          <input class="flex-1 bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 appearance-none border border-transparent rounded w-full py-2 px-4 text-gray-700 leading-tight" type="email" placeholder="Your email">
+          <button class="ml-4 flex-shrink-0 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded" type="button">
+            Sign Up
+          </button>
+        </form>
+      
+        <button class="bg-blue-500 active:bg-red-900 text-white">
+          Click me
+        </button>
+</body>
+</html>

@@ -9,6 +9,7 @@
 </head>
 <body>
   <!-- 　レスポンシブデザイン -->
+  <div class="w-full max-w-screen-xl mx-auto px-6">
     <h1 class="text-4xl text-green-700 text-center font-semibold">Hello Tailwind</h1>
       <div class="md:flex">
         <div class="md:flex-shrink-0">
@@ -37,22 +38,198 @@
         Hover me
       </button>
 
-      
-        <form class="flex w-full max-w-sm mx-auto">
-          <input class="flex-1 bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 appearance-none border border-transparent rounded w-full py-2 px-4 text-gray-700 leading-tight" type="email" placeholder="Your email">
-          <button class="ml-4 flex-shrink-0 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded" type="button">
-            Sign Up
-          </button>
-        </form>
-      
-        <button class="bg-blue-500 active:bg-red-900 text-white">
+      <!-- Active -->
+      <form class="flex w-full max-w-sm mx-auto">
+        <input class="flex-1 bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 appearance-none border border-transparent rounded w-full py-2 px-4 text-gray-700 leading-tight" type="email" placeholder="Your email">
+        <button class="ml-4 flex-shrink-0 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded" type="button">
+          Sign Up
+        </button>
+      </form>
+      <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 text-center p-4">
+        <button type="button" class="bg-blue-500 active:bg-blue-700 text-white font-semibold hover:text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">
           Click me
         </button>
+      </div>
+    
+      <!-- Group-hover -->
+      <div class="group hover:bg-blue-500 p-4 cursor-pointer bg-white rounded max-w-xs w-full shadow-lg select-none overflow-hidden mx-auto">
+        <p class="font-semibold text-lg mb-1 text-gray-900 group-hover:text-white">New Project</p>
+        <p class="text-gray-700 group-hover:text-white mb-2">Create a new project from a variety of starting templates.</p>
+      </div>
 
-        <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 text-center p-4">
-          <button type="button" class="bg-blue-500 active:bg-blue-700 text-white font-semibold hover:text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Click me
-          </button>
+
+      <!-- Focus-within -->
+      <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-8">
+        <form class="w-full max-w-sm mx-auto">
+          <div class="flex items-center border-b-2 border-gray-400 focus-within:border-teal-500 py-2">
+            <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
+            <button class="focus:shadow-outline focus:outline-none flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="rounded-b-lg border-l border-r border-b border-gray-400 bg-white p-4">
+        <div class="text-center">
+          <button class="px-4 py-2 rounded text-white font-bold bg-orange-500 hover:bg-orange-600">Button</button>
         </div>
+      </div>
+
+      <!-- Extracting CSS components with @apply -->
+      <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 text-center p-4"></div>
+        <button class="btn-blue rotate-90">
+        Button
+        </button>
+      </div>
+
+      <!-- プラグインの作成 -->
+      <!-- Adding utilities -->
+      <div class="p-4 text-left m-4 shadow">
+        <div class="text-shadow mb-2">プラグインで</div>
+        <div class="text-shadow-md mb-2">tailwind.config.jsに追加した</div>
+        <div class="text-shadow-lg mb-2">もじに影をつける</div>
+        <div class="text-shadow-xl mb-2">ユーティリティ</div>
+        <div class="text-shadow-2xl mb-2">です</div>
+      </div>
+
+      <!-- ボックスサイジング -->
+      <!-- Include borders and padding -->
+      <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 bg-white p-8 flex items-center justify-around">
+        <div class="box-border h-20 w-32 p-4 border-4 border-gray-400 bg-gray-200">
+          <div class="h-full w-full bg-gray-400"></div>
+        </div>
+      </div>
+
+      <!-- Exclude borders and padding -->
+      <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 bg-white p-8 flex items-center justify-around">
+        <div class="box-content h-20 w-32 p-4 border-4 border-gray-400 bg-gray-200">
+          <div class="h-full w-full bg-gray-400"></div>
+        </div>
+      </div>
+
+      <!-- ディスプレイ -->
+      <!-- Block -->
+      <div class="bg-red-300 p-4">
+        <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2">1</span>
+        <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2">2</span>
+        <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2">3</span>
+      </div>
+
+      <!-- Flex -->
+      <div class="flex bg-gray-200">
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+      </div>
+
+      <!-- Inline flex -->
+      <div class="inline-flex bg-gray-200">
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid gap-4 grid-cols-3">
+        <div class="bg-gray-300 h-12"></div>
+        <div class="bg-gray-500 h-12"></div>
+        <div class="bg-gray-300 h-12"></div>
+        <div class="bg-gray-500 h-12"></div>
+        <div class="bg-gray-300 h-12"></div>
+        <div class="bg-gray-500 h-12"></div>
+        <div class="bg-gray-300 h-12"></div>
+        <div class="bg-gray-500 h-12"></div>
+        <div class="bg-gray-300 h-12"></div>
+      </div>
+
+      <!-- Contents -->
+      <div class="flex bg-gray-200">
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+        <div class="contents">
+          <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+          <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+        </div>
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">4</div>
+      </div>
+
+      <!-- クリア -->
+      <!-- Clear left -->
+      <div class="bg-gray-200 p-4">
+        <img class="float-left mr-4 my-2 h-24" src="https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+        <img class="float-right ml-4 my-2 h-32" src="https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+        <p class="clear-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+      </div>
+
+      <!-- フレックスディレクション -->
+      <!-- Row -->
+      <div class="flex flex-row bg-gray-200">
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 justify-items-start h-48">
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">1</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">2</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">3</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">4</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">5</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">6</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 justify-items-auto h-48">
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">1</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">2</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">3</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">4</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">5</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">6</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 justify-items-stretch h-48">
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">1</div>
+        <div class="justify-self-auto text-gray-800 bg-gray-500 flex justify-center items-center px-4 py-2">2</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">3</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">4</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">5</div>
+        <div class="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">6</div>
+      </div>
+
+      <div class="grid grid-cols-3 bg-gray-200 place-content-between h-48">
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">4</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">5</div>
+        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">6</div>
+      </div>
+
+      <p class="font-source diagonal-fractions text-xl text-center text-gray-800">1/2 3/4</p>
+
+      <div class=" bg-white p-4">
+        <p class="max-w-xs p-2 bg-gray-200 mx-auto break-normal sm:break-words md:break-all lg:truncate xl:break-normal">日本語はあまり関係なさそう。.break-normalを使用して、通常の単語ブレークポイントにのみ改行を追加します。必要に応じて、.break-wordsを使用して、単語の途中で改行を追加します。.break-allを使用して、単語全体を保持しようとせずに、必要に応じて改行を追加します。必要に応じて、.truncateを使用して、オーバーフローしたテキストを省略記号(…)で切り捨てます。</p>
+      </div>
+      
+      <div>
+        <button type="button" class="transition duration-500 ease-in-out bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white font-semibold px-4 py-2 rounded focus:outline-none transform hover:-translate-y-1 hover:scale-110">
+            Click me
+        </button>
+      </div>
+
+      <div class="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 bg-white text-center p-4 py-12">
+        <span class="inline-flex rounded-md shadow-sm">
+          <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150 cursor-not-allowed" disabled="">
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Processing
+          </button>
+        </span>
+      </div>
+
+
+  </div>
 </body>
 </html>
